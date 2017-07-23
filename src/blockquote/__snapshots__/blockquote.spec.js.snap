@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`blockquote should add custom className 1`] = `
+<blockquote
+  className="cc-blockquote custom"
+  style={undefined}
+>
+  <p>
+    
+  </p>
+</blockquote>
+`;
+
+exports[`blockquote should add custom style 1`] = `
+<blockquote
+  className="cc-blockquote"
+  style={
+    Object {
+      "color": "red",
+    }
+  }
+>
+  <p>
+    
+  </p>
+</blockquote>
+`;
+
+exports[`blockquote should add text 1`] = `
+<blockquote
+  className="cc-blockquote"
+  style={undefined}
+>
+  <p>
+    hello world
+  </p>
+</blockquote>
+`;
