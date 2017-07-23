@@ -51,7 +51,7 @@ const listModules = () => {
 
 const build = () => {
   listModules().forEach(async (module) => {
-    console.log(`📦 Build module '${module}'`)
+    console.log(`📦  Build module '${module}'`)
     const config = getConfig(module)
     const bundle = await rollup.rollup(config)
     await bundle.write(config)
