@@ -17,9 +17,12 @@
     "build:cuicui": "cross-env NODE_ENV=production rollup -c ./config/rollup.config.js",
     "build:modules": "cross-env NODE_ENV=production node ./config/rollup.modules.js",
     "build": "npm-run-all --parallel build:*",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "codecov"
   },
-  "browserslist": ["> 5%"],
+  "browserslist": [
+    "> 5%"
+  ],
   "peerDependencies": {
     "prop-types": "15.x.x",
     "react": "15.x.x"
@@ -34,6 +37,7 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-es2015-rollup": "^3.0.0",
     "babel-preset-react": "^6.24.1",
+    "codecov": "^2.2.0",
     "cross-env": "^5.0.1",
     "cssnano": "^3.10.0",
     "eslint": "^3.19.0",
@@ -85,7 +89,9 @@
     },
     "setupFiles": [
       "<rootDir>/config/tests/setup.js"
-    ]
+    ],
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   },
   "eslintConfig": {
     "parser": "babel-eslint",
