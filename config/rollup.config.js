@@ -3,6 +3,7 @@ const babel = require('rollup-plugin-babel')
 const nodeResolve = require('rollup-plugin-node-resolve')
 const commonjs = require('rollup-plugin-commonjs')
 const postcss = require('rollup-plugin-postcss')
+const autoprefixer = require('autoprefixer')
 const cssnano = require('cssnano')
 const uglify = require('rollup-plugin-uglify')
 
@@ -22,7 +23,7 @@ module.exports = {
     postcss({
       extensions: ['.css'],
       extract: true,
-      plugins: [cssnano()],
+      plugins: [autoprefixer(), cssnano()],
     }),
     nodeResolve({
       extensions: ['.js', '.jsx'],

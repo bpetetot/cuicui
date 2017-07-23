@@ -19,11 +19,13 @@
     "build": "npm-run-all --parallel build:*",
     "test": "jest"
   },
+  "browserslist": ["> 5%"],
   "peerDependencies": {
     "prop-types": "15.x.x",
     "react": "15.x.x"
   },
   "devDependencies": {
+    "autoprefixer": "^7.1.2",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-plugin-transform-class-properties": "^6.24.1",

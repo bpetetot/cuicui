@@ -7,6 +7,7 @@ const nodeResolve = require('rollup-plugin-node-resolve')
 const commonjs = require('rollup-plugin-commonjs')
 const postcss = require('rollup-plugin-postcss')
 const cssnano = require('cssnano')
+const autoprefixer = require('autoprefixer')
 const uglify = require('rollup-plugin-uglify')
 
 const SRC_DIR = path.resolve(__dirname, '..', 'src')
@@ -27,7 +28,7 @@ const getConfig = moduleName => ({
     postcss({
       extensions: ['.css'],
       extract: path.join(LIB_DIR, moduleName, `${moduleName}.css`),
-      plugins: [cssnano()],
+      plugins: [autoprefixer(), cssnano()],
     }),
     nodeResolve({
       extensions: ['.js', '.jsx'],
