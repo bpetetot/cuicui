@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`panel should add children 1`] = `
+<div
+  className="cc-panel"
+  style={undefined}
+>
+  <div
+    className="cc-panel--title"
+  />
+  <div
+    className="cc-panel--content"
+  >
+    hello world
+  </div>
+</div>
+`;
+
+exports[`panel should add custom className 1`] = `
+<div
+  className="cc-panel custom"
+  style={undefined}
+>
+  <div
+    className="cc-panel--title"
+  />
+  <div
+    className="cc-panel--content"
+  />
+</div>
+`;
+
+exports[`panel should add custom style 1`] = `
+<div
+  className="cc-panel"
+  style={
+    Object {
+      "color": "red",
+    }
+  }
+>
+  <div
+    className="cc-panel--title"
+  />
+  <div
+    className="cc-panel--content"
+  />
+</div>
+`;
+
+exports[`panel should add title 1`] = `
+<div
+  className="cc-panel"
+  style={undefined}
+>
+  <div
+    className="cc-panel--title"
+  >
+    hello world
+  </div>
+  <div
+    className="cc-panel--content"
+  />
+</div>
+`;
