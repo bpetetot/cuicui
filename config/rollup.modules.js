@@ -1,16 +1,20 @@
 const fs = require('fs')
+const path = require('path')
+const rollup = require('rollup')
 const babel = require('rollup-plugin-babel')
 const nodeResolve = require('rollup-plugin-node-resolve')
 const commonjs = require('rollup-plugin-commonjs')
 const postcss = require('rollup-plugin-postcss')
 const uglify = require('rollup-plugin-uglify')
 
+const SRC_DIR = path.resolve(__dirname, '..', 'src')
+const LIB_DIR = path.resolve(__dirname, '..', 'lib')
 const pkg = JSON.parse(fs.readFileSync('./package.json'))
 
-module.exports = {
-  entry: pkg['jsnext:main'] || 'src/index.js',
-  dest: pkg.main,
-  moduleName: pkg.name,
+const getConfig = moduleName => ({
+  entry: path.join(SRC_DIR, moduleName, 'index.js'),
+  dest: path.join(LIB_DIR, moduleName, 'index.js'),
+  moduleName,
   format: 'umd',
   external: [...Object.keys(pkg.peerDependencies)],
   globals: {
@@ -33,4 +37,21 @@ module.exports = {
     }),
     uglify(),
   ],
+})
+
+const listModules = () => {
+  return fs
+    .readdirSync(SRC_DIR)
+    .filter(file => fs.lstatSync(path.join(SRC_DIR, file)).isDirectory())
 }
+
+const build = () => {
+  listModules().forEach(async (module) => {
+    console.log(`📦 Build module '${module}'`)
+    const config = getConfig(module)
+    const bundle = await rollup.rollup(config)
+    await bundle.write(config)
+  })
+}
+
+build()
