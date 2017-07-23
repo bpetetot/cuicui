@@ -6,7 +6,7 @@ import './blockquote.css'
 
 const Blockquote = ({ text, className, style }) => {
   return (
-    <blockquote className={c('blockquote', className)} style={style}>
+    <blockquote className={c('cc-blockquote', className)} style={style}>
       <p>
         {text}
       </p>
