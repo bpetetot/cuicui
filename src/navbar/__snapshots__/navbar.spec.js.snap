@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`navbar should add custom className 1`] = `
+<header
+  className="cc-navbar custom"
+  style={undefined}
+>
+  <div
+    className="cc-navbar--container"
+  >
+    <div
+      className="cc-navbar--logo"
+    />
+    <nav
+      className="cc-navbar--menu"
+    />
+  </div>
+</header>
+`;
+
+exports[`navbar should add custom style 1`] = `
+<header
+  className="cc-navbar"
+  style={
+    Object {
+      "color": "red",
+    }
+  }
+>
+  <div
+    className="cc-navbar--container"
+  >
+    <div
+      className="cc-navbar--logo"
+    />
+    <nav
+      className="cc-navbar--menu"
+    />
+  </div>
+</header>
+`;
+
+exports[`navbar should add logo 1`] = `
+<header
+  className="cc-navbar"
+  style={undefined}
+>
+  <div
+    className="cc-navbar--container"
+  >
+    <div
+      className="cc-navbar--logo"
+    >
+      hello world
+    </div>
+    <nav
+      className="cc-navbar--menu"
+    />
+  </div>
+</header>
+`;
+
+exports[`navbar should add menu 1`] = `
+<header
+  className="cc-navbar"
+  style={undefined}
+>
+  <div
+    className="cc-navbar--container"
+  >
+    <div
+      className="cc-navbar--logo"
+    />
+    <nav
+      className="cc-navbar--menu"
+    >
+      hello world
+    </nav>
+  </div>
+</header>
+`;
