@@ -13,12 +13,12 @@ const App = () => {
       </Navbar>
       <div className="sidebar">
         <Panel title="🐦  cuicui">
-          <div><a href="#">Getting started</a></div>
+          <div><a href="#getting-started">Getting started</a></div>
         </Panel>
         <Panel title="Components">
-          <div><a href="#">Blockquote</a></div>
-          <div><a href="#">Navbar</a></div>
-          <div><a href="#">Panel</a></div>
+          <div><a href="#blockquote">Blockquote</a></div>
+          <div><a href="#navbar">Navbar</a></div>
+          <div><a href="#panel">Panel</a></div>
         </Panel>
       </div>
       <div className="main">
