@@ -16,7 +16,8 @@
     "lint": "eslint --ext js,jsx src",
     "build:cuicui": "cross-env NODE_ENV=production rollup -c ./config/rollup.config.js",
     "build:modules": "cross-env NODE_ENV=production node ./config/rollup.modules.js",
-    "build": "npm-run-all --parallel build:*"
+    "build": "npm-run-all --parallel build:*",
+    "test": "jest"
   },
   "peerDependencies": {
     "prop-types": "15.x.x",
@@ -25,9 +26,10 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
-    "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-es2015-rollup": "^3.0.0",
     "babel-preset-react": "^6.24.1",
     "cross-env": "^5.0.1",
@@ -37,8 +39,11 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^20.0.4",
     "npm-run-all": "^4.0.2",
-    "postcss-modules": "^0.8.0",
+    "react": "^15.6.1",
+    "react-test-renderer": "^15.6.1",
     "rollup": "^0.45.2",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^8.0.2",
@@ -52,9 +57,32 @@
       "react"
     ],
     "plugins": [
-      "external-helpers",
       "transform-class-properties",
       "transform-object-rest-spread"
+    ],
+    "env": {
+      "test": {
+        "plugins": [
+          "transform-runtime",
+          "transform-es2015-modules-commonjs"
+        ]
+      }
+    }
+  },
+  "jest": {
+    "transform": {
+      ".*": "./node_modules/babel-jest"
+    },
+    "moduleDirectories": [
+      "node_modules",
+      "config/tests"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/tests/__mocks__/fileMock.js",
+      "\\.(css|scss|less|sass)$": "identity-obj-proxy"
+    },
+    "setupFiles": [
+      "<rootDir>/config/tests/setup.js"
     ]
   },
   "eslintConfig": {
