@@ -1,31 +1,23 @@
+/* eslint-disable global-require */
 import React from 'react'
 
-import Navbar from '../../src/navbar'
-import PanelList from '../../src/panelList'
-import Blockquote from '../../src/blockquote'
+import modules from './modules'
 
+import Navbar from './components/navbar'
+import Sidebar from './components/sidebar'
+import Module from './components/module'
+// import Markdown from './components/markdown'
+// <Markdown className="main" source={require('../../README.md')} />
 import './app.css'
 
 const App = () => {
   return (
     <div className="app">
-      <Navbar logo="🐦  cuicui" className="header">
-        <a href="https://github.com/bpetetot/cuicui" target="_new">source on github</a>
-      </Navbar>
-      <div className="sidebar">
-        <PanelList title="🐦  cuicui">
-          <a href="#getting-started">Getting started</a>
-        </PanelList>
-        <PanelList title="Components">
-          <a href="#blockquote">Blockquote</a>
-          <a href="#navbar">Navbar</a>
-          <a href="#panel">Panel</a>
-        </PanelList>
-      </div>
-      <div className="main">
-        <h1>Getting started</h1>
-        <Blockquote text="🐦 · My React UI components" />
-      </div>
+      <Navbar className="header" />
+      <Sidebar className="sidebar" modules={modules} />
+      {
+        modules.map(module => <Module key={module.name} className="main" {...module} />)
+      }
     </div>
   )
 }
