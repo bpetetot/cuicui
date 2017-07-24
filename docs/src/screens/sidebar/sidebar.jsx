@@ -1,33 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import PanelList from '../../../../src/panelList'
-
+import LinkMatch from '../../components/linkMatch'
 import './sidebar.css'
 
-const Sidebar = ({ modules, className }) => {
+const Sidebar = ({ pages, className }) => {
   return (
     <div className={className}>
       <PanelList title="🐦  cuicui">
-        <a href="#getting-started">Getting started</a>
+        <LinkMatch to="/" label="Getting started" />
       </PanelList>
       <PanelList title="Components">
-        {modules.map(({ name, label }) =>
-          (<a key={name} href={`#${name}`}>
-            {label}
-          </a>),
-        )}
+        {pages.map(({ name, label }) => <LinkMatch key={name} to={`/${name}`} label={label} />)}
       </PanelList>
     </div>
   )
 }
 
 Sidebar.propTypes = {
-  modules: PropTypes.array,
+  pages: PropTypes.array,
   className: PropTypes.string,
 }
 
 Sidebar.defaultProps = {
-  modules: [],
+  pages: [],
   className: undefined,
 }
 

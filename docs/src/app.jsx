@@ -1,24 +1,23 @@
-/* eslint-disable global-require */
 import React from 'react'
+import { HashRouter as Router } from 'react-router-dom'
 
-import modules from './modules'
+import pages from './pages'
 
-import Navbar from './components/navbar'
-import Sidebar from './components/sidebar'
-import Module from './components/module'
-// import Markdown from './components/markdown'
-// <Markdown className="main" source={require('../../README.md')} />
+import Navbar from './screens/navbar'
+import Sidebar from './screens/sidebar'
+import Main from './screens/main'
+
 import './app.css'
 
 const App = () => {
   return (
-    <div className="app">
-      <Navbar className="header" />
-      <Sidebar className="sidebar" modules={modules} />
-      {
-        modules.map(module => <Module key={module.name} className="main" {...module} />)
-      }
-    </div>
+    <Router>
+      <div className="app">
+        <Navbar className="header" />
+        <Sidebar className="sidebar" pages={pages} />
+        <Main className="main" pages={pages} />
+      </div>
+    </Router>
   )
 }
 
