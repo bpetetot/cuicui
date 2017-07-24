@@ -1,5 +1,5 @@
 /* eslint-env jest */
-describe('tests/setuo', () => {
+describe('tests/setup', () => {
   describe('console.error', () => {
     it('should throw error', () => {
       let error = false

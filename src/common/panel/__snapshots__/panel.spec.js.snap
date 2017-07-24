@@ -8,11 +8,7 @@ exports[`panel should add children 1`] = `
   <div
     className="cc-panel--title"
   />
-  <div
-    className="cc-panel--content"
-  >
-    hello world
-  </div>
+  hello world
 </div>
 `;
 
@@ -23,9 +19,6 @@ exports[`panel should add custom className 1`] = `
 >
   <div
     className="cc-panel--title"
-  />
-  <div
-    className="cc-panel--content"
   />
 </div>
 `;
@@ -42,9 +35,6 @@ exports[`panel should add custom style 1`] = `
   <div
     className="cc-panel--title"
   />
-  <div
-    className="cc-panel--content"
-  />
 </div>
 `;
 
@@ -58,8 +48,5 @@ exports[`panel should add title 1`] = `
   >
     hello world
   </div>
-  <div
-    className="cc-panel--content"
-  />
 </div>
 `;

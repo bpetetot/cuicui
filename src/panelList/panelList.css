@@ -1,0 +1,13 @@
+.cc-panel-list--content {
+  padding: 0;
+  margin: 0;
+}
+
+.cc-panel-list--content > li {
+  padding: 5px 10px;
+  margin: 0;
+  list-style-type: none;
+  line-height: 1.2em;
+  height: 1.2em;
+  border-bottom: 1px solid #ddd;
+}
