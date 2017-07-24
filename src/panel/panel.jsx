@@ -1,19 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import c from 'classnames'
 
+import DefaultPanel from '../common/panel'
 import './panel.css'
 
 const Panel = ({ title, children, className, style }) => {
   return (
-    <div className={c('cc-panel', className)} style={style}>
-      <div className="cc-panel--title">
-        {title}
-      </div>
-      <div className="cc-panel--content">
+    <DefaultPanel title={title} className={className} style={style}>
+      <p className="cc-panel--content">
         {children}
-      </div>
-    </div>
+      </p>
+    </DefaultPanel>
   )
 }
 

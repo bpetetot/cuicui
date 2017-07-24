@@ -47,6 +47,7 @@ const listModules = () => {
   return fs
     .readdirSync(SRC_DIR)
     .filter(file => fs.lstatSync(path.join(SRC_DIR, file)).isDirectory())
+    .filter(filename => filename !== 'common')
 }
 
 const build = () => {

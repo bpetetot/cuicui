@@ -1,16 +1,23 @@
 import React from 'react'
+import { HashRouter as Router } from 'react-router-dom'
 
-import Navbar from '../../src/navbar'
+import pages from './pages'
+
+import Navbar from './screens/navbar'
+import Sidebar from './screens/sidebar'
+import Main from './screens/main'
 
 import './app.css'
 
 const App = () => {
   return (
-    <div>
-      <Navbar logo="🐦 cuicui">
-        <a href="https://github.com/bpetetot/cuicui" target="_new">source on github</a>
-      </Navbar>
-    </div>
+    <Router>
+      <div className="app">
+        <Navbar className="header" />
+        <Sidebar className="sidebar" pages={pages} />
+        <Main className="main" pages={pages} />
+      </div>
+    </Router>
   )
 }
 

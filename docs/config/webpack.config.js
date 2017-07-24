@@ -46,6 +46,10 @@ module.exports = {
         test: /\.(png|svg|gif|jpg|html)$/,
         use: ['file-loader'],
       },
+      {
+        test: /\.md$/,
+        use: 'raw-loader',
+      },
     ],
   },
 }

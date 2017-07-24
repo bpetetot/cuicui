@@ -1,6 +1,6 @@
 .cc-navbar {
-  height: 54px;
-  line-height: 54px;
+  height: 4em;
+  line-height: 4em;
   color: #fff;
   background-color: #24292e;
   display: flex;
@@ -8,12 +8,13 @@
 }
 
 .cc-navbar--container {
-  width: 900px;
+  width: 100%;
 }
 
 .cc-navbar--logo {
+  font-size: 1.2em;
   font-weight: 700;
-  margin-left: 10px;
+  margin-left: 2em;
   float: left;
 }
 
@@ -22,7 +23,7 @@
 }
 
 .cc-navbar--menu a {
-  padding: 0 10px;
+  padding: 0 2em;
   text-decoration: none;
   color: rgba(255,255,255,0.75);
 }
