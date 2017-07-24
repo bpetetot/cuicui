@@ -40,7 +40,6 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
-        include: [SRC_DOCS, SRC_CUICUI],
       },
       {
         test: /\.(png|svg|gif|jpg|html)$/,

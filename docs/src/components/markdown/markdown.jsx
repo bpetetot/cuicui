@@ -2,11 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import c from 'classnames'
 import ReactMarkdown from 'react-markdown'
+import CodeBlock from './codeBlock'
 
 import './markdown.css'
 
 const Markdown = ({ source, className }) => {
-  return <ReactMarkdown className={c('ccd-markdown', className)} source={source} />
+  return (
+    <ReactMarkdown
+      className={c('ccd-markdown', className)}
+      source={source}
+      renderers={{ CodeBlock }}
+    />
+  )
 }
 
 Markdown.propTypes = {

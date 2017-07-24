@@ -1,6 +1,8 @@
 import React from 'react'
 import { HashRouter as Router } from 'react-router-dom'
 
+import 'highlight.js/styles/github.css'
+
 import pages from './pages'
 
 import Navbar from './screens/navbar'
@@ -8,6 +10,7 @@ import Sidebar from './screens/sidebar'
 import Main from './screens/main'
 
 import './app.css'
+
 
 const App = () => {
   return (
