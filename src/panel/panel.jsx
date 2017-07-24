@@ -7,9 +7,9 @@ import './panel.css'
 const Panel = ({ title, children, className, style }) => {
   return (
     <DefaultPanel title={title} className={className} style={style}>
-      <div className="cc-panel--content">
+      <p className="cc-panel--content">
         {children}
-      </div>
+      </p>
     </DefaultPanel>
   )
 }

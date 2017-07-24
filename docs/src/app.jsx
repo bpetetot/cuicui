@@ -1,8 +1,8 @@
 import React from 'react'
 
 import Navbar from '../../src/navbar'
-import Panel from '../../src/panel'
 import PanelList from '../../src/panelList'
+import Blockquote from '../../src/blockquote'
 
 import './app.css'
 
@@ -13,9 +13,9 @@ const App = () => {
         <a href="https://github.com/bpetetot/cuicui" target="_new">source on github</a>
       </Navbar>
       <div className="sidebar">
-        <Panel title="🐦  cuicui">
-          <div><a href="#getting-started">Getting started</a></div>
-        </Panel>
+        <PanelList title="🐦  cuicui">
+          <a href="#getting-started">Getting started</a>
+        </PanelList>
         <PanelList title="Components">
           <a href="#blockquote">Blockquote</a>
           <a href="#navbar">Navbar</a>
@@ -24,6 +24,7 @@ const App = () => {
       </div>
       <div className="main">
         <h1>Getting started</h1>
+        <Blockquote text="🐦 · My React UI components" />
       </div>
     </div>
   )

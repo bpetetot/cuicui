@@ -1,13 +1,13 @@
 .cc-panel {
-  border: 1px solid #ddd;
-  border-radius: 3px;
+  border: .02em solid #ddd;
+  border-radius: .2em;
 }
 
 .cc-panel--title {
-  padding-left: 10px;
-  border-bottom: 1px solid #ddd;
-  height: 32px;
-  line-height: 32px;
+  font-size: 1.1em;
+  padding-left: 1em;
+  border-bottom: .02em solid #ddd;
+  height: 2em;
+  line-height: 2em;
   color: #AAA;
-  font-size: 1em;
 }
