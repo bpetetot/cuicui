@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react'
 import PropTypes from 'prop-types'
 import Markdown from '../markdown'
@@ -6,7 +7,7 @@ const Page = ({ markdown, samples, className }) => {
   return (
     <div className={className}>
       <Markdown source={markdown} />
-      {samples.map(Sample => <Sample key={Sample.name} />)}
+      {samples.map((Sample, i) => <Sample key={i} />)}
     </div>
   )
 }
