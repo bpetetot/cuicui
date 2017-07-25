@@ -1,4 +1,4 @@
-ul.cc-tabs-header{display:-webkit-box;display:flex;margin:0;padding:0;list-style:none;border-bottom:1px solid #ddd}ul.cc-tabs-header>li>button{cursor:pointer;font-weight:600;padding:.9em 1.1em;border:none;background-color:initial;outline:none}.cc-tabs--selected{cursor:default;color:#243641;background-color:#ddd}
+ul.cc-tabs-header{display:-webkit-box;display:flex;margin:0;padding:0;list-style:none;border-bottom:.02em solid #ddd}ul.cc-tabs-header>li>button{cursor:pointer;font-weight:600;padding:.9em 1.1em;border:none;background-color:initial;outline:none}.cc-tabs--selected{cursor:default;color:#243641;background-color:#ddd}
 .cc-tabs-actions{position:absolute;top:0;right:0;padding:.9em 1.1em}
-.cc-tabs{position:relative;border:.1em solid #ddd;border-radius:.2em}.cc-tabs-content{padding:1em}
+.cc-tabs{position:relative;border:.02em solid #ddd;border-radius:.2em}.cc-tabs-content{padding:1em}
 .cc-tabs-tab{overflow:auto}

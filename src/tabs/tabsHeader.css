@@ -3,7 +3,7 @@ ul.cc-tabs-header {
   margin: 0;
   padding: 0;
   list-style: none;
-  border-bottom: 1px solid #ddd;
+  border-bottom: .02em solid #ddd;
 }
 
 ul.cc-tabs-header > li > button {
