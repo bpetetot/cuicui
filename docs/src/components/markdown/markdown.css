@@ -11,13 +11,13 @@
 }
 
 .ccd-markdown pre {
-    padding: .5em;
     overflow: auto;
-    font-size: .9em;
-    line-height: 1.45;
-    background-color: #f6f8fa;
     border: .02em solid #ddd;
     border-radius: .2em;
+}
+
+.ccd-markdown pre > code {
+    padding: 1em;
 }
 
 .ccd-markdown blockquote {

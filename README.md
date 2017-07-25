@@ -6,8 +6,8 @@
 
 ## Getting started
 
-```
-yarn add cuicui
+```shell
+$ yarn add cuicui
 ```
 
 ## License
