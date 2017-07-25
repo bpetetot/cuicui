@@ -10,15 +10,22 @@ ul.cc-tabs-header > li > button {
   cursor: pointer;
   font-weight: 600;
   font-size: 1em;
+  color: #586069;
   padding: .9em 1.1em;
   border: none;
   background-color: transparent;
   outline: none;
 }
 
-.cc-tabs--selected {
-  cursor: default;
-  color: #243641;
+ul.cc-tabs-header > li.cc-tabs--selected {
   background-color: #ddd;
 }
+
+ul.cc-tabs-header > li.cc-tabs--selected > button {
+  cursor: default;
+  color: #000;
+}
+
+
+
 
