@@ -1,0 +1,4 @@
+.cc-tabs-header{display:-webkit-box;display:flex;margin:0;padding:0;list-style:none;border-bottom:1px solid #ddd}.cc-tabs-header-item{cursor:pointer;margin-right:0;padding:.9em 1.1em;line-height:1.1em;color:#607580;font-weight:600}.cc-tabs-header-item--selected{cursor:default;color:#243641;background-color:#ddd}
+.cc-tabs-actions{position:absolute;top:0;right:0;padding:.9em 1.1em}
+.cc-tabs{position:relative;border:.1em solid #ddd}
+.cc-tabs-tab{width:100%;height:100%;overflow:auto;padding:1em}

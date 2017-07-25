@@ -24,4 +24,10 @@ export default [
     markdown: require('../../src/panelList/README.md'),
     samples: require('./samples/panelList').default,
   },
+  {
+    name: 'tabs',
+    label: 'Tabs',
+    markdown: require('../../src/tabs/README.md'),
+    samples: require('./samples/tabs').default,
+  },
 ]
