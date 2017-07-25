@@ -1,0 +1,25 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #24292e;
+}
+
+a:visited {
+  color: #24292e;
+}
+
+a:hover {
+  color: #0366C8;
+  cursor: pointer;
+  text-decoration: underline;
+}
