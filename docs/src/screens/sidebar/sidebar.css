@@ -18,3 +18,7 @@
 .cc-panel-list--content > li > input::placeholder {
   color: #cecece;
 }
+
+.ccd-sidebar-noresult {
+  color: #cecece;
+}

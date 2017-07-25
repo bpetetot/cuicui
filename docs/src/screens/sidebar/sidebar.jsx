@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import PanelList from '../../../../src/panelList'
@@ -18,6 +19,7 @@ class Sidebar extends Component {
 
   render() {
     const { visiblePages } = this.state
+    const hasPages = visiblePages.length > 0
     return (
       <div className={this.props.className}>
         <PanelList title="🐦  cuicui">
@@ -28,6 +30,7 @@ class Sidebar extends Component {
           {visiblePages.map(({ name, label }) =>
             <LinkMatch key={name} to={`/${name}`} label={label} />,
           )}
+          { !hasPages && <div className="ccd-sidebar-noresult">👻 Nothing...</div> }
         </PanelList>
       </div>
     )
