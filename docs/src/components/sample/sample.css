@@ -1,0 +1,12 @@
+.cc-tabs-content--code {
+  margin: 0;
+  padding: 0;
+}
+
+.cc-tabs-content--code pre {
+  margin: 0;
+}
+
+.cc-tabs-content--code pre > code {
+  padding: 1em;
+}

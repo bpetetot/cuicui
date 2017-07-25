@@ -33,7 +33,7 @@ class Tabs extends Component {
           className={headersClassName}
         />
         <TabsAction actions={actions} className={actionsClassName} />
-        <div className="cc-tabs-content">
+        <div className={c('cc-tabs-content', { [`cc-tabs-content--${selected}`]: selected })}>
           {tab}
         </div>
       </div>

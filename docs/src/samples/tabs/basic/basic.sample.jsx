@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { Tabs, Tab } from '../../../../src/tabs'
+import { Tabs, Tab } from '../../../../../src/tabs'
 
-const Sample1 = () => {
+const Basic = () => {
   return (
     <Tabs>
       <Tab tabKey="tab1" title="Tab 1">
@@ -18,4 +18,4 @@ const Sample1 = () => {
   )
 }
 
-export default Sample1
+export default Basic
