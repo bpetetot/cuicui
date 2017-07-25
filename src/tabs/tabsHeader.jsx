@@ -21,7 +21,7 @@ class TabsHeader extends Component {
             })}
             aria-expanded={selectedTab === tabKey}
           >
-            <button onClick={this.handleSelectedTab(tabKey)}>
+            <button type="button" onClick={this.handleSelectedTab(tabKey)}>
               {title}
             </button>
           </li>),

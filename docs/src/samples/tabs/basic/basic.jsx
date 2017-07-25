@@ -10,7 +10,7 @@ const Basic = () => {
     <div>
       <h2>Simple Tabs</h2>
       <p>A simple Tabs component displaying tab content on click.</p>
-      <Sample code={source} githubLink="https://github.com/bpetetot/cuicui/tree/master/src/tabs">
+      <Sample code={source} githubLink="https://github.com/bpetetot/cuicui/blob/master/docs/src/samples/tabs/basic/basic.sample.jsx">
         <TabSample />
       </Sample>
     </div>

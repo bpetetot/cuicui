@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 
 import App from './app'
+import './styles/global.css'
 
 const render = (Component) => {
   ReactDOM.render(
