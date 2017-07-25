@@ -9,6 +9,7 @@ ul.cc-tabs-header {
 ul.cc-tabs-header > li > button {
   cursor: pointer;
   font-weight: 600;
+  font-size: 1em;
   padding: .9em 1.1em;
   border: none;
   background-color: transparent;
