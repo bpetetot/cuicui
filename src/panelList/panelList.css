@@ -1,14 +1,14 @@
 ul.cc-panel-list--content {
   padding: 0;
   margin: 0;
+  overflow: auto;
 }
 
 ul.cc-panel-list--content > li {
-  padding: 0 1em;
+  padding: 0;
   margin: 0;
   list-style-type: none;
   line-height: 2em;
-  height: 2em;
   border-bottom: .02em solid #ddd;
 }
 
@@ -17,5 +17,8 @@ ul.cc-panel-list--content > li:last-child {
 }
 
 ul.cc-panel-list--content > li > * {
+  box-sizing: border-box;
+  display: block;
+  padding: 0 1em;
   width: 100%;
 }
