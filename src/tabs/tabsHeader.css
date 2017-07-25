@@ -11,10 +11,15 @@ ul.cc-tabs-header > li > button {
   font-weight: 600;
   font-size: 1em;
   color: #586069;
+  margin: 0;
   padding: .9em 1.1em;
   border: none;
   background-color: transparent;
   outline: none;
+}
+
+ul.cc-tabs-header > li > button:hover {
+  color: #000;
 }
 
 ul.cc-tabs-header > li.cc-tabs--selected {
