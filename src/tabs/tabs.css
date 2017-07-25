@@ -1,0 +1,9 @@
+.cc-tabs {
+  position: relative;
+  border: .1em solid #ddd;
+  border-radius: .2em;
+}
+
+.cc-tabs-content {
+  padding: 1em;
+}
