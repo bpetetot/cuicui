@@ -33,7 +33,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /^((?!\.sample).)*\.js[x]*$/,
         use: getLoaders([]),
         include: [SRC_DOCS, SRC_CUICUI],
       },

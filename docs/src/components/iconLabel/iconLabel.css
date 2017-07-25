@@ -1,0 +1,8 @@
+.ccd-icon-label {
+  line-height: 1em;
+  height: 1em;
+}
+
+.ccd-icon-label > i {
+  padding-right: .4em;
+}

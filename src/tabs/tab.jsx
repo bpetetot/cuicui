@@ -4,9 +4,9 @@ import c from 'classnames'
 
 import './tab.css'
 
-const Tab = ({ tabKey, title, className, children }) => {
+const Tab = ({ tabKey, title, className, children }) => { //eslint-disable-line
   return (
-    <div className={c('cc-tabs-tab', className)} aria-hidden={tabKey} aria-label={title}>
+    <div className={c('cc-tabs-tab', className)} aria-hidden={tabKey}>
       {children}
     </div>
   )
@@ -14,7 +14,7 @@ const Tab = ({ tabKey, title, className, children }) => {
 
 Tab.propTypes = {
   tabKey: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.node.isRequired,
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.array]),
 }
