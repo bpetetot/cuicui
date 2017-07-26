@@ -25,6 +25,11 @@ export default [
     samples: require('./samples/panelList').default,
   },
   {
+    name: 'search',
+    label: 'Search',
+    markdown: require('../../src/search/README.md'),
+  },
+  {
     name: 'tabs',
     label: 'Tabs',
     markdown: require('../../src/tabs/README.md'),

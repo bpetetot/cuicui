@@ -1,0 +1,20 @@
+.cc-search {
+  position: relative;
+}
+
+.cc-search .cc-search-icon {
+  position: absolute;
+  pointer-events: none;
+  height: 1em;
+  width: 1em;
+  padding: .5em;
+  fill: #cecece;
+}
+
+.cc-search .cc-search-icon {
+  left: 0px;
+}
+
+.cc-search > input {
+  padding-left: 2em;
+}

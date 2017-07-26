@@ -7,3 +7,15 @@
   cursor: default;
   color: #000;
 }
+
+.cc-panel-list--content > li > div.cc-search {
+  padding: 0;
+}
+
+input.ccd-sidebar-search {
+  border: none;
+}
+
+.ccd-sidebar-noresult {
+  color: #cecece;
+}
