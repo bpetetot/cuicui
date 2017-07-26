@@ -8,15 +8,13 @@
   color: #000;
 }
 
-.cc-panel-list--content > li > input {
-  font-size: 1em;
-  padding: .5em .5em .5em 1em;
-  outline: none;
-  border: none;
+.cc-panel-list--content > li > div.cc-search {
+  padding: 0;
 }
 
-.cc-panel-list--content > li > input::placeholder {
-  color: #cecece;
+input.ccd-sidebar-search {
+  border: none;
+  padding-left: 2em;
 }
 
 .ccd-sidebar-noresult {

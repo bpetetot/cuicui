@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import PanelList from '../../../../src/panelList'
+import Search from '../../../../src/search'
 import LinkMatch from '../../components/linkMatch'
 import './sidebar.css'
 
@@ -12,9 +13,13 @@ class Sidebar extends Component {
 
   handleSearch = (e) => {
     const search = e.target.value
-    this.setState(() => ({
-      visiblePages: this.props.pages.filter(page => page.label.includes(search)),
-    }))
+    this.setState((state, props) => {
+      return {
+        visiblePages: props.pages.filter(page =>
+          page.label.toLowerCase().includes(search.toLowerCase()),
+        ),
+      }
+    })
   }
 
   render() {
@@ -25,12 +30,15 @@ class Sidebar extends Component {
         <PanelList title="🐦  cuicui">
           <LinkMatch to="/" label="Getting started" />
         </PanelList>
+
         <PanelList title="Components">
-          <input type="search" placeholder="Search..." onChange={this.handleSearch} />
+          <Search className="ccd-sidebar-search" onChange={this.handleSearch} />
+
           {visiblePages.map(({ name, label }) =>
             <LinkMatch key={name} to={`/${name}`} label={label} />,
           )}
-          { !hasPages && <div className="ccd-sidebar-noresult">👻 Nothing...</div> }
+
+          {!hasPages && <div className="ccd-sidebar-noresult">👻 Nothing...</div>}
         </PanelList>
       </div>
     )
