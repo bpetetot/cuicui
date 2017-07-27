@@ -19,10 +19,11 @@ module.exports = {
     'prop-types': 'PropTypes',
   },
   plugins: [
-    postcss(Object.assign({}, {
+    postcss({
       extensions: ['.css'],
       extract: true,
-    }), postcssConfig),
+      plugins: postcssConfig.plugins,
+    }),
     nodeResolve({
       extensions: ['.js', '.jsx'],
     }),

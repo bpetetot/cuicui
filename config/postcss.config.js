@@ -1,8 +1,8 @@
+const postcssImport = require('postcss-import')
+const postcssNext = require('postcss-cssnext')
+const cssnano = require('cssnano')
+
 /* eslint-disable global-require */
 module.exports = {
-  plugins: [
-    require('postcss-import')({ /* ...options */ }),
-    require('postcss-cssnext')({ warnForDuplicates: false }),
-    require('cssnano')({ /* ...options */ }),
-  ],
+  plugins: [postcssImport(), postcssNext({ warnForDuplicates: false }), cssnano()],
 }

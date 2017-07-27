@@ -24,10 +24,11 @@ const getConfig = moduleName => ({
     'prop-types': 'PropTypes',
   },
   plugins: [
-    postcss(Object.assign({}, {
+    postcss({
       extensions: ['.css'],
-      extract: true,
-    }), postcssConfig),
+      extract: path.join(LIB_DIR, moduleName, `${moduleName}.css`),
+      plugins: postcssConfig.plugins,
+    }),
     nodeResolve({
       extensions: ['.js', '.jsx'],
     }),
