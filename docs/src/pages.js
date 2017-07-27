@@ -28,6 +28,7 @@ export default [
     name: 'search',
     label: 'Search',
     markdown: require('../../src/search/README.md'),
+    samples: require('./samples/search').default,
   },
   {
     name: 'tabs',
