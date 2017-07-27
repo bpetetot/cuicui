@@ -28,7 +28,6 @@
     "react": "15.x.x"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.2",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -48,6 +47,8 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.4",
     "npm-run-all": "^4.0.2",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^10.0.0",
     "react": "^15.6.1",
     "react-test-renderer": "^15.6.1",
     "rollup": "^0.45.2",

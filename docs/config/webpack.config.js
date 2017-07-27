@@ -1,4 +1,5 @@
 const path = require('path')
+const postcssConfig = require('./postcss.config')
 
 const dev = process.env.NODE_ENV !== 'production'
 const BUILD_DOCS = path.join(__dirname, '..', 'build')
@@ -39,7 +40,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader', { loader: 'postcss-loader', options: postcssConfig }],
       },
       {
         test: /\.(png|svg|gif|jpg|html)$/,
