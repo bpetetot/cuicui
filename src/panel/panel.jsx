@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import DefaultPanel from '../common/panel'
+import DefaultPanel from '../common/components/panel'
 import './panel.css'
 
 const Panel = ({ title, children, className, style }) => {

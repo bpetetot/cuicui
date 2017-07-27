@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import c from 'classnames'
 
-import Input from '../common/input'
-import SearchIcon from '../icons/search'
+import Input from '../common/components/input'
+import SearchIcon from '../common/icons/search'
 import './search.css'
 
 const Search = ({ className, style, ...rest }) => {
