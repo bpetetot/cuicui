@@ -1,5 +1,5 @@
 const path = require('path')
-const postcssConfig = require('./postcss.config')
+const postcssConfig = require('../../config/postcss.config')
 
 const dev = process.env.NODE_ENV !== 'production'
 const BUILD_DOCS = path.join(__dirname, '..', 'build')

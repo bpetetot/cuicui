@@ -6,9 +6,7 @@ const babel = require('rollup-plugin-babel')
 const nodeResolve = require('rollup-plugin-node-resolve')
 const commonjs = require('rollup-plugin-commonjs')
 const postcss = require('rollup-plugin-postcss')
-const postcssImport = require('postcss-import')
-const postcssCssNext = require('postcss-cssnext')
-const cssnano = require('cssnano')
+const postcssConfig = require('./postcss.config')
 const uglify = require('rollup-plugin-uglify')
 
 const SRC_DIR = path.resolve(__dirname, '..', 'src')
@@ -26,11 +24,10 @@ const getConfig = moduleName => ({
     'prop-types': 'PropTypes',
   },
   plugins: [
-    postcss({
+    postcss(Object.assign({}, {
       extensions: ['.css'],
-      extract: path.join(LIB_DIR, moduleName, `${moduleName}.css`),
-      plugins: [postcssImport(), postcssCssNext({ warnForDuplicates: false }), cssnano()],
-    }),
+      extract: true,
+    }), postcssConfig),
     nodeResolve({
       extensions: ['.js', '.jsx'],
     }),

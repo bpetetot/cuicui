@@ -3,9 +3,7 @@ const babel = require('rollup-plugin-babel')
 const nodeResolve = require('rollup-plugin-node-resolve')
 const commonjs = require('rollup-plugin-commonjs')
 const postcss = require('rollup-plugin-postcss')
-const postcssImport = require('postcss-import')
-const postcssCssNext = require('postcss-cssnext')
-const cssnano = require('cssnano')
+const postcssConfig = require('./postcss.config')
 const uglify = require('rollup-plugin-uglify')
 
 const pkg = JSON.parse(fs.readFileSync('./package.json'))
@@ -21,11 +19,10 @@ module.exports = {
     'prop-types': 'PropTypes',
   },
   plugins: [
-    postcss({
+    postcss(Object.assign({}, {
       extensions: ['.css'],
       extract: true,
-      plugins: [postcssImport(), postcssCssNext({ warnForDuplicates: false }), cssnano()],
-    }),
+    }), postcssConfig),
     nodeResolve({
       extensions: ['.js', '.jsx'],
     }),
