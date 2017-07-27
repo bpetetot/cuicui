@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import c from 'classnames'
 
 import Input from '../common/input'
 import SearchIcon from '../icons/search'
@@ -7,9 +8,9 @@ import './search.css'
 
 const Search = ({ className, style, ...rest }) => {
   return (
-    <div className="cc-search">
+    <div className={c('cc-search', className)} style={style}>
       <SearchIcon className="cc-search-icon" />
-      <Input className={className} style={style} placeholder="Search" {...rest} type="search" />
+      <Input placeholder="Search" {...rest} type="search" />
     </div>
   )
 }

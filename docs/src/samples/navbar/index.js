@@ -1,4 +1,3 @@
-import Sample1 from './sample1'
-import Sample2 from './sample2'
+import Basic from './basic'
 
-export default [Sample1, Sample2]
+export default [Basic]
