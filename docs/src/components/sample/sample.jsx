@@ -8,16 +8,23 @@ import GithubLink from './githubLink'
 
 import './sample.css'
 
-const Sample = ({ children, code, githubLink }) => {
+const Sample = ({ children, code, css, githubLink }) => {
   return (
     <div>
       <Tabs actions={<GithubLink link={githubLink} />}>
         <Tab tabKey="preview" title={<IconLabel icon="eye">Preview</IconLabel>}>
           {children}
         </Tab>
-        <Tab tabKey="code" title={<IconLabel icon="code">Code</IconLabel>}>
+        <Tab tabKey="code" title={<IconLabel icon="code">Javascript</IconLabel>}>
           <CodeBlock language="es6" literal={code} />
         </Tab>
+        {
+          css && (
+            <Tab tabKey="css" title={<IconLabel icon="css3">CSS</IconLabel>}>
+              <CodeBlock language="css" literal={css} />
+            </Tab>
+          )
+        }
       </Tabs>
     </div>
   )
@@ -26,7 +33,13 @@ const Sample = ({ children, code, githubLink }) => {
 Sample.propTypes = {
   children: PropTypes.node.isRequired,
   code: PropTypes.string.isRequired,
+  css: PropTypes.string,
   githubLink: PropTypes.string.isRequired,
+}
+
+
+Sample.defaultProps = {
+  css: undefined,
 }
 
 export default Sample
