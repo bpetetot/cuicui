@@ -2,8 +2,6 @@ import React from 'react'
 
 import PanelList from '../../../../../src/panelList'
 
-import './basic.sample.css'
-
 const Basic = () => {
   return (
     <PanelList title="My panel title" className="sample-panel">

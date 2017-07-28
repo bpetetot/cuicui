@@ -39,7 +39,7 @@ module.exports = {
         include: [SRC_DOCS, SRC_CUICUI],
       },
       {
-        test: /\.css$/,
+        test: /^((?!\.sample).)*\.css*$/,
         use: ['style-loader', 'css-loader', { loader: 'postcss-loader', options: postcssConfig }],
       },
       {

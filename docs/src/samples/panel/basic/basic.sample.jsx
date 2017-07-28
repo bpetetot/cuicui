@@ -2,8 +2,6 @@ import React from 'react'
 
 import Panel from '../../../../../src/panel'
 
-import './basic.sample.css'
-
 const Basic = () => {
   return (
     <Panel title="My panel title" className="sample-panel">

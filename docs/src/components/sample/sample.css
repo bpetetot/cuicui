@@ -10,3 +10,16 @@
 .cc-tabs-content--code pre > code {
   padding: 1em;
 }
+
+.cc-tabs-content--css {
+  margin: 0;
+  padding: 0;
+}
+
+.cc-tabs-content--css pre {
+  margin: 0;
+}
+
+.cc-tabs-content--css pre > code {
+  padding: 1em;
+}
