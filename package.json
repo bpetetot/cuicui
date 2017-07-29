@@ -52,6 +52,7 @@
     "postcss-import": "^10.0.0",
     "react": "^15.6.1",
     "react-test-renderer": "^15.6.1",
+    "recompose": "^0.24.0",
     "rollup": "^0.45.2",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^8.0.2",
