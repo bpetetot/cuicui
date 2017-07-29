@@ -6,6 +6,8 @@ import { AppContainer } from 'react-hot-loader'
 import App from './app'
 import './styles/global.css'
 
+window.Perf = require('react-addons-perf') // eslint-disable-line global-require
+
 const render = (Component) => {
   ReactDOM.render(
     <AppContainer>

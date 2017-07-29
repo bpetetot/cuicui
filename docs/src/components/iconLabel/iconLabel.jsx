@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import onlyUpdateForPropTypes from 'recompose/onlyUpdateForPropTypes'
 
 import './iconLabel.css'
 
@@ -17,4 +18,4 @@ IconLabel.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default IconLabel
+export default onlyUpdateForPropTypes(IconLabel)

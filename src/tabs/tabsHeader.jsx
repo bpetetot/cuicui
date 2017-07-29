@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import onlyUpdateForPropTypes from 'recompose/onlyUpdateForPropTypes'
 import c from 'classnames'
 
 import './tabsHeader.css'
@@ -42,4 +43,4 @@ TabsHeader.defaultProps = {
   className: undefined,
 }
 
-export default TabsHeader
+export default onlyUpdateForPropTypes(TabsHeader)

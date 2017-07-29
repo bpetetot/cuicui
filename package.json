@@ -25,7 +25,8 @@
   ],
   "peerDependencies": {
     "prop-types": "15.x.x",
-    "react": "15.x.x"
+    "react": "15.x.x",
+    "recompose": "^0.24.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",

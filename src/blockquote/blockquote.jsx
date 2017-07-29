@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import onlyUpdateForPropTypes from 'recompose/onlyUpdateForPropTypes'
 import c from 'classnames'
 
 import './blockquote.css'
@@ -26,4 +27,4 @@ Blockquote.defaultProps = {
   style: undefined,
 }
 
-export default Blockquote
+export default onlyUpdateForPropTypes(Blockquote)

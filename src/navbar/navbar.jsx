@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import onlyUpdateForPropTypes from 'recompose/onlyUpdateForPropTypes'
 import c from 'classnames'
 
 import './navbar.css'
@@ -33,4 +34,4 @@ Navbar.defaultProps = {
   style: undefined,
 }
 
-export default Navbar
+export default onlyUpdateForPropTypes(Navbar)
