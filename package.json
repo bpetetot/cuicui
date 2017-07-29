@@ -115,6 +115,7 @@
     }
   },
   "dependencies": {
-    "classnames": "^2.2.5"
+    "classnames": "^2.2.5",
+    "popper.js": "^1.11.0"
   }
 }
