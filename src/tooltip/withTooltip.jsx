@@ -22,12 +22,11 @@ const withTooltip = (Wrapped, options) => {
 
     handleHover = type => () => {
       if (type === 'enter') {
-        console.log('enterr')
         this.setState(state => ({ ...state, opened: true }))
       } else {
-        console.log('leeave')
         this.setState(state => ({ ...state, opened: false }))
       }
+      this.popperInstance.update()
     }
 
     updatePositions = (data) => {
@@ -37,7 +36,7 @@ const withTooltip = (Wrapped, options) => {
 
     componentDidMount() {
       this.popperInstance = new Popper(this.targetRef, this.popperRef, {
-        placement: 'bottom',
+        placement: 'top',
         modifiers: {
           applyStyle: { enabled: false },
           updateState: {
