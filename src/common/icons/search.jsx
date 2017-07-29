@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import pure from 'recompose/pure'
 
 /**
  * icon by Artyom Khamitov
@@ -38,4 +39,4 @@ SearchIcon.defaultProps = {
   height: 24,
 }
 
-export default SearchIcon
+export default pure(SearchIcon)

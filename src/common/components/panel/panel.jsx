@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import onlyUpdateForPropTypes from 'recompose/onlyUpdateForPropTypes'
 import c from 'classnames'
 
 import './panel.css'
@@ -29,4 +30,4 @@ Panel.defaultProps = {
   style: undefined,
 }
 
-export default Panel
+export default onlyUpdateForPropTypes(Panel)

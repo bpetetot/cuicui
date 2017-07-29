@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import onlyUpdateForPropTypes from 'recompose/onlyUpdateForPropTypes'
 import c from 'classnames'
 
 import TabsHeader from './tabsHeader'
@@ -13,7 +14,9 @@ class Tabs extends Component {
   }
 
   handleSelectedTab = (key) => {
-    this.setState(() => ({ selected: key }))
+    if (key !== this.state.selected) {
+      this.setState(() => ({ selected: key }))
+    }
   }
 
   render() {
@@ -58,4 +61,4 @@ Tabs.defaultProps = {
   headersClassName: undefined,
 }
 
-export default Tabs
+export default onlyUpdateForPropTypes(Tabs)

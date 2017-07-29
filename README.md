@@ -10,6 +10,11 @@
 $ yarn add cuicui
 ```
 
+**peer dependencies :**
+- [react](https://github.com/facebook/react)
+- [prop-types](https://github.com/facebook/prop-types)
+- [recompose](https://github.com/acdlite/recompose)
+
 ## License
 
 MIT

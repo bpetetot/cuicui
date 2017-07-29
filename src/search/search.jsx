@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import pure from 'recompose/pure'
 import c from 'classnames'
 
 import Input from '../common/components/input'
@@ -25,4 +26,4 @@ Search.defaultProps = {
   style: undefined,
 }
 
-export default Search
+export default pure(Search)

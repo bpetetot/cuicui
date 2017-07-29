@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import onlyUpdateForPropTypes from 'recompose/onlyUpdateForPropTypes'
 import c from 'classnames'
 
 import './tab.css'
@@ -24,4 +25,4 @@ Tab.defaultProps = {
   className: undefined,
 }
 
-export default Tab
+export default onlyUpdateForPropTypes(Tab)

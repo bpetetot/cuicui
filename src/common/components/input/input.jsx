@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import pure from 'recompose/pure'
 import c from 'classnames'
 
 import './input.css'
@@ -16,4 +17,4 @@ Input.defaultProps = {
   className: undefined,
 }
 
-export default Input
+export default pure(Input)

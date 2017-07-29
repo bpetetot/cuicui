@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import onlyUpdateForPropTypes from 'recompose/onlyUpdateForPropTypes'
 import c from 'classnames'
 
 import './tabsActions.css'
@@ -25,4 +26,4 @@ TabsActions.defaultProps = {
   className: undefined,
 }
 
-export default TabsActions
+export default onlyUpdateForPropTypes(TabsActions)
