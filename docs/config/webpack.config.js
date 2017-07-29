@@ -19,6 +19,7 @@ module.exports = {
   devServer: {
     stats: 'errors-only',
   },
+  stats: 'errors-only',
   entry: {
     bundle: ['./src/index.jsx'],
   },

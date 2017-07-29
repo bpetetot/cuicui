@@ -16,6 +16,7 @@
     "lint": "eslint --ext js,jsx src",
     "build:cuicui": "cross-env NODE_ENV=production rollup -c ./config/rollup.config.js",
     "build:modules": "cross-env NODE_ENV=production node ./config/rollup.modules.js",
+    "build:docs": "cd docs && yarn build",
     "build": "npm-run-all --parallel build:*",
     "test": "jest",
     "test:coverage": "codecov"
