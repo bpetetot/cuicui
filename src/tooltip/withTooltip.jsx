@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Popper from 'popper.js'
 
-import Tooltip from './Tooltip'
+import './Tooltip.css'
 
 const DEFAULT_OPTIONS = {
   display: 'block',
@@ -16,25 +16,30 @@ const withTooltip = (Wrapped, options) => {
 
   const TooltipWrapper = class extends Component {
     state = {
+      opened: false,
       offsets: {},
     }
 
-    handleHover = () => {
-      // TODO
+    handleHover = type => () => {
+      if (type === 'enter') {
+        console.log('enterr')
+        this.setState(state => ({ ...state, opened: true }))
+      } else {
+        console.log('leeave')
+        this.setState(state => ({ ...state, opened: false }))
+      }
     }
 
     updatePositions = (data) => {
-      // console.log(data)
-      this.setState(() => ({ offsets: data.offsets.popper }))
+      this.setState(state => ({ ...state, offsets: data.offsets.popper }))
       return data
     }
 
     componentDidMount() {
       this.popperInstance = new Popper(this.targetRef, this.popperRef, {
-        placement: 'right',
+        placement: 'bottom',
         modifiers: {
           applyStyle: { enabled: false },
-          onCreate: this.updatePositions,
           updateState: {
             fn: this.updatePositions,
             enabled: true,
@@ -42,6 +47,8 @@ const withTooltip = (Wrapped, options) => {
           },
         },
       })
+
+      this.popperInstance.update()
     }
 
     componentWillUnmount() {
@@ -49,20 +56,33 @@ const withTooltip = (Wrapped, options) => {
     }
 
     render() {
-      const { tooltip } = this.props
-      const { offsets } = this.state
+      const { tooltip, ...rest } = this.props
+      const { opened, offsets } = this.state
       return (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '300px' }}>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '300px',
+          }}
+        >
           <div
             ref={r => (this.targetRef = r)}
-            style={{ width: '200px', height: '200px', backgroundColor: 'blue' }}
+            onMouseEnter={this.handleHover('enter')}
+            onMouseLeave={this.handleHover('leave')}
           >
-            Target
+            <Wrapped {...rest} />
           </div>
           <div
             ref={r => (this.popperRef = r)}
-            style={{ width: '200px', height: '16px', backgroundColor: 'red', ...offsets }}
-            className="tooltip"
+            style={{
+              display: opened ? 'block' : 'none',
+              top: offsets.top,
+              left: offsets.left,
+              position: 'absolute',
+            }}
+            className="cc-tooltip"
             role="tooltip"
           >
             <div className="tooltip-arrow" />
