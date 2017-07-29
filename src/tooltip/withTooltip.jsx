@@ -8,7 +8,7 @@ const DEFAULT_OPTIONS = {
   display: 'block',
 }
 
-// https://gist.github.com/FezVrasta/6533adf4358a6927b48f7478706a5f23
+// https://github.com/FezVrasta/popper.js/blob/master/packages/tooltip/src/index.js
 // https://pusher.com/sessions/meetup/react-vienna/popperjs-positioning-libraries-integration-in-react
 
 const withTooltip = (Wrapped, options) => {
@@ -18,6 +18,7 @@ const withTooltip = (Wrapped, options) => {
     state = {
       opened: false,
       offsets: {},
+      styles: {},
     }
 
     handleHover = type => () => {
@@ -30,13 +31,13 @@ const withTooltip = (Wrapped, options) => {
     }
 
     updatePositions = (data) => {
-      this.setState(state => ({ ...state, offsets: data.offsets.popper }))
+      this.setState(state => ({ ...state, offsets: data.offsets.popper, styles: data.styles }))
       return data
     }
 
     componentDidMount() {
       this.popperInstance = new Popper(this.targetRef, this.popperRef, {
-        placement: 'top',
+        placement: 'right',
         modifiers: {
           applyStyle: { enabled: false },
           updateState: {
@@ -56,7 +57,7 @@ const withTooltip = (Wrapped, options) => {
 
     render() {
       const { tooltip, ...rest } = this.props
-      const { opened, offsets } = this.state
+      const { opened, offsets, styles } = this.state
       return (
         <div
           style={{
@@ -70,6 +71,7 @@ const withTooltip = (Wrapped, options) => {
             ref={r => (this.targetRef = r)}
             onMouseEnter={this.handleHover('enter')}
             onMouseLeave={this.handleHover('leave')}
+            style={{ width: '300px' }}
           >
             <Wrapped {...rest} />
           </div>
@@ -77,14 +79,13 @@ const withTooltip = (Wrapped, options) => {
             ref={r => (this.popperRef = r)}
             style={{
               display: opened ? 'block' : 'none',
-              top: offsets.top,
-              left: offsets.left,
               position: 'absolute',
+              ...styles,
             }}
             className="cc-tooltip"
             role="tooltip"
           >
-            <div className="tooltip-arrow" />
+            <div ref={r => (this.arrowRef = r)} className="cc-tooltip-arrow" />
             <div className="tooltip-inner">
               {tooltip}
             </div>
