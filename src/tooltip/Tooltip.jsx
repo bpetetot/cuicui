@@ -1,46 +1,79 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import Popper from 'popper.js'
 
-import './Tooltip.css'
+import TooltipOverlay from './TooltipOverlay'
 
 class Tooltip extends Component {
+  state = {
+    opened: false,
+    popperStyle: {},
+    arrowStyle: {},
+    placement: '',
+  }
+
+  componentDidMount() {
+    const { placement } = this.props
+    this.popperInstance = new Popper(this.targetRef, this.tooltip.popperRef, {
+      placement,
+      modifiers: {
+        preventOverflow: { boundariesElement: 'viewport' },
+        applyStyle: { enabled: false },
+        updateState: {
+          fn: this.updatePositions,
+          enabled: true,
+          order: 900,
+        },
+        arrow: { element: this.tooltip.arrowRef },
+      },
+    })
+    this.popperInstance.update()
+  }
+
+  componentWillUnmount() {
+    this.popperInstance.destroy()
+  }
+
+  handleHover = type => () => {
+    this.setState(() => ({ opened: type === 'enter' }))
+    this.popperInstance.update()
+  }
+
+  updatePositions = (data) => {
+    this.setState(() => ({
+      popperStyle: data.styles,
+      arrowStyle: data.offsets.arrow,
+      placement: data.attributes['x-placement'],
+    }))
+    return data
+  }
+
   render() {
-    const { content, opened, placement, popperStyle, arrowStyle } = this.props
-    const display = !opened ? { display: 'none' } : {}
+    const { tooltip, inline, children } = this.props
     return (
-      <div
-        ref={r => (this.popperRef = r)}
-        style={{ ...display, ...popperStyle }}
-        data-placement={placement}
-        className="cc-tooltip"
-        role="tooltip"
+      <span
+        ref={r => (this.targetRef = r)}
+        onMouseEnter={this.handleHover('enter')}
+        onMouseLeave={this.handleHover('leave')}
+        style={{ display: inline ? 'inline' : 'block' }}
       >
-        <div
-          ref={r => (this.arrowRef = r)}
-          style={{ ...arrowStyle }}
-          className="cc-tooltip-arrow"
-        />
-        <div className="cc-tooltip-inner">
-          {content}
-        </div>
-      </div>
+        {children}
+        <TooltipOverlay ref={t => (this.tooltip = t)} content={tooltip} {...this.state} />
+      </span>
     )
   }
 }
 
 Tooltip.propTypes = {
-  content: PropTypes.node.isRequired,
-  opened: PropTypes.bool,
-  placement: PropTypes.string,
-  popperStyle: PropTypes.object,
-  arrowStyle: PropTypes.object,
+  tooltip: PropTypes.node.isRequired,
+  inline: PropTypes.bool,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.array]).isRequired,
+  placement: PropTypes.oneOf(['auto', 'top', 'bottom', 'left', 'right']),
 }
 
 Tooltip.defaultProps = {
-  opened: false,
-  placement: 'top',
-  popperStyle: {},
-  arrowStyle: {},
+  placement: 'auto',
+  inline: false,
 }
 
 export default Tooltip
