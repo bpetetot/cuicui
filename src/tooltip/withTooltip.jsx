@@ -17,9 +17,9 @@ const withTooltip = (Wrapped, options) => {
   const TooltipWrapper = class extends Component {
     state = {
       opened: false,
-      offsets: {},
       styles: {},
       arrow: {},
+      attributes: {},
     }
 
     handleHover = type => () => {
@@ -32,12 +32,11 @@ const withTooltip = (Wrapped, options) => {
     }
 
     updatePositions = (data) => {
-      console.log(data)
       this.setState(state => ({
         ...state,
-        offsets: data.offsets.popper,
         styles: data.styles,
         arrow: data.offsets.arrow,
+        attributes: data.attributes,
       }))
       return data
     }
@@ -68,7 +67,7 @@ const withTooltip = (Wrapped, options) => {
 
     render() {
       const { tooltip, ...rest } = this.props
-      const { opened, arrow, offsets, styles } = this.state
+      const { opened, arrow, attributes, styles } = this.state
       return (
         <div
           style={{
@@ -91,14 +90,13 @@ const withTooltip = (Wrapped, options) => {
               position: 'absolute',
               ...styles,
             }}
+            data-placement={attributes['x-placement']}
             className="cc-tooltip"
             role="tooltip"
           >
             <div
               ref={r => (this.arrowRef = r)}
-              style={{
-                ...arrow,
-              }}
+              style={{ ...arrow }}
               className="cc-tooltip-arrow"
             />
             <div className="cc-tooltip-inner">
