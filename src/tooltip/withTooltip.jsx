@@ -19,6 +19,7 @@ const withTooltip = (Wrapped, options) => {
       opened: false,
       offsets: {},
       styles: {},
+      arrow: {},
     }
 
     handleHover = type => () => {
@@ -31,19 +32,29 @@ const withTooltip = (Wrapped, options) => {
     }
 
     updatePositions = (data) => {
-      this.setState(state => ({ ...state, offsets: data.offsets.popper, styles: data.styles }))
+      console.log(data)
+      this.setState(state => ({
+        ...state,
+        offsets: data.offsets.popper,
+        styles: data.styles,
+        arrow: data.offsets.arrow,
+      }))
       return data
     }
 
     componentDidMount() {
       this.popperInstance = new Popper(this.targetRef, this.popperRef, {
-        placement: 'right',
+        placement: 'bottom',
         modifiers: {
+          preventOverflow: { boundariesElement: 'viewport' },
           applyStyle: { enabled: false },
           updateState: {
             fn: this.updatePositions,
             enabled: true,
             order: 900,
+          },
+          arrow: {
+            element: this.arrowRef,
           },
         },
       })
@@ -57,21 +68,19 @@ const withTooltip = (Wrapped, options) => {
 
     render() {
       const { tooltip, ...rest } = this.props
-      const { opened, offsets, styles } = this.state
+      const { opened, arrow, offsets, styles } = this.state
       return (
         <div
           style={{
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            height: '300px',
           }}
         >
           <div
             ref={r => (this.targetRef = r)}
             onMouseEnter={this.handleHover('enter')}
             onMouseLeave={this.handleHover('leave')}
-            style={{ width: '300px' }}
           >
             <Wrapped {...rest} />
           </div>
@@ -85,8 +94,14 @@ const withTooltip = (Wrapped, options) => {
             className="cc-tooltip"
             role="tooltip"
           >
-            <div ref={r => (this.arrowRef = r)} className="cc-tooltip-arrow" />
-            <div className="tooltip-inner">
+            <div
+              ref={r => (this.arrowRef = r)}
+              style={{
+                ...arrow,
+              }}
+              className="cc-tooltip-arrow"
+            />
+            <div className="cc-tooltip-inner">
               {tooltip}
             </div>
           </div>

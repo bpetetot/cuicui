@@ -1,4 +1,16 @@
 .cc-tooltip {
+
+}
+
+.cc-tooltip-arrow {
+  position: 'absolute';
+  top: -16px;
+  height: 16px;
+  width: 16px;
+  background-color: #333;
+}
+
+.cc-tooltip-inner {
   padding: 1em;
   background-color: #333;
   color: #fff;
