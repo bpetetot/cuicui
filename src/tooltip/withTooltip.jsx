@@ -6,10 +6,8 @@ import Tooltip from './Tooltip'
 
 const DEFAULT_OPTIONS = {
   display: 'block',
+  placement: 'auto',
 }
-
-// https://github.com/FezVrasta/popper.js/blob/master/packages/tooltip/src/index.js
-// https://pusher.com/sessions/meetup/react-vienna/popperjs-positioning-libraries-integration-in-react
 
 const withTooltip = (Wrapped, options) => {
   const opts = { ...DEFAULT_OPTIONS, ...options }
@@ -19,21 +17,16 @@ const withTooltip = (Wrapped, options) => {
       opened: false,
       popperStyle: {},
       arrowStyle: {},
-      placement: 'bottom',
+      placement: '',
     }
 
     handleHover = type => () => {
-      if (type === 'enter') {
-        this.setState(state => ({ ...state, opened: true }))
-      } else {
-        this.setState(state => ({ ...state, opened: false }))
-      }
+      this.setState(() => ({ opened: type === 'enter' }))
       this.popperInstance.update()
     }
 
     updatePositions = (data) => {
-      this.setState(state => ({
-        ...state,
+      this.setState(() => ({
         popperStyle: data.styles,
         arrowStyle: data.offsets.arrow,
         placement: data.attributes['x-placement'],
@@ -43,7 +36,7 @@ const withTooltip = (Wrapped, options) => {
 
     componentDidMount() {
       this.popperInstance = new Popper(this.targetRef, this.tooltip.popperRef, {
-        placement: 'bottom',
+        placement: opts.placement,
         modifiers: {
           preventOverflow: { boundariesElement: 'viewport' },
           applyStyle: { enabled: false },
@@ -52,9 +45,7 @@ const withTooltip = (Wrapped, options) => {
             enabled: true,
             order: 900,
           },
-          arrow: {
-            element: this.tooltip.arrowRef,
-          },
+          arrow: { element: this.tooltip.arrowRef },
         },
       })
       this.popperInstance.update()
@@ -73,11 +64,7 @@ const withTooltip = (Wrapped, options) => {
           onMouseLeave={this.handleHover('leave')}
         >
           <Wrapped {...rest} />
-          <Tooltip
-            ref={t => (this.tooltip = t)}
-            content={tooltip}
-            {...this.state}
-          />
+          <Tooltip ref={t => (this.tooltip = t)} content={tooltip} {...this.state} />
         </div>
       )
     }

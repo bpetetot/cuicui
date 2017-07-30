@@ -46,7 +46,7 @@
   margin-bottom: 0;
 }
 
-.cc-tooltip-arrow  {
+.cc-tooltip .cc-tooltip-arrow  {
   border-color: #333;
   width: 0;
   height: 0;
@@ -55,7 +55,7 @@
   margin: 5px;
 }
 
-.cc-tooltip-inner {
+.cc-tooltip .cc-tooltip-inner {
   margin: 5px;
   padding: .8em;
   background-color: #333;

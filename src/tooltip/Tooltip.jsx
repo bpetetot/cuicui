@@ -10,11 +10,7 @@ class Tooltip extends Component {
     return (
       <div
         ref={r => (this.popperRef = r)}
-        style={{
-          position: 'absolute',
-          ...display,
-          ...popperStyle,
-        }}
+        style={{ ...display, ...popperStyle }}
         data-placement={placement}
         className="cc-tooltip"
         role="tooltip"
