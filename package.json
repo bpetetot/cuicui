@@ -41,6 +41,7 @@
     "codecov": "^2.2.0",
     "cross-env": "^5.0.1",
     "cssnano": "next",
+    "enzyme": "^2.9.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.2",
     "eslint-plugin-import": "^2.7.0",
@@ -52,6 +53,7 @@
     "postcss-cssnext": "^3.0.2",
     "postcss-import": "^10.0.0",
     "react": "^15.6.1",
+    "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1",
     "recompose": "^0.24.0",
     "rollup": "^0.45.2",
@@ -115,6 +117,7 @@
     }
   },
   "dependencies": {
-    "classnames": "^2.2.5"
+    "classnames": "^2.2.5",
+    "popper.js": "^1.11.0"
   }
 }

@@ -42,4 +42,10 @@ export default [
     markdown: require('../../src/tabs/README.md'),
     samples: require('./samples/tabs').default,
   },
+  {
+    name: 'tooltip',
+    label: 'Tooltip',
+    markdown: require('../../src/tooltip/README.md'),
+    samples: require('./samples/tooltip').default,
+  },
 ]

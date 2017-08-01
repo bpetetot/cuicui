@@ -16,7 +16,7 @@
     border-radius: .2em;
 }
 
-.ccd-markdown pre > code {
+.ccd-markdown > pre > code {
     padding: 1em;
 }
 
@@ -25,4 +25,12 @@
     margin: 0;
     padding-left: 1em;
     border-left: 0.25em #eee solid;
+}
+
+.ccd-markdown a {
+    color: #0366d6
+}
+
+.ccd-markdown a:visited {
+    color: #0366d6
 }
