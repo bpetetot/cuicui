@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Tooltip from './Tooltip'
+import Tooltip from './tooltip'
 
 const DEFAULT_OPTIONS = {
   placement: 'auto',
