@@ -1,6 +1,12 @@
 /* eslint-disable global-require */
 export default [
   {
+    name: 'badge',
+    label: 'Badge',
+    markdown: require('../../src/badge/README.md'),
+    samples: require('./samples/badge').default,
+  },
+  {
     name: 'blockquote',
     label: 'Blockquote',
     markdown: require('../../src/blockquote/README.md'),

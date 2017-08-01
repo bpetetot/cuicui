@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`badge should add children 1`] = `
+<span
+  className="cc-badge cc-badge-default"
+  style={Object {}}
+>
+  hello world
+</span>
+`;
+
+exports[`badge should add custom className 1`] = `
+<span
+  className="cc-badge cc-badge-default custom"
+  style={Object {}}
+>
+  hello world
+</span>
+`;
+
+exports[`badge should add custom style 1`] = `
+<span
+  className="cc-badge cc-badge-default"
+  style={
+    Object {
+      "color": "red",
+    }
+  }
+>
+  hello world
+</span>
+`;
+
+exports[`badge should display like a pill 1`] = `
+<span
+  className="cc-badge cc-badge-default cc-badge-pill"
+  style={Object {}}
+>
+  hello world
+</span>
+`;
+
+exports[`badge should take react callback 1`] = `
+<span
+  className="cc-badge cc-badge-default"
+  onClick={[Function]}
+  style={Object {}}
+>
+  hello world
+</span>
+`;
