@@ -3,6 +3,6 @@
   align-items: center;
 }
 
-.ccd-badge-sample > .cc-badge {
-  margin: .5em;
+.cc-badge {
+  margin-left: .5em;
 }

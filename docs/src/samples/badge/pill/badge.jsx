@@ -2,7 +2,6 @@ import React from 'react'
 
 import source from 'raw-loader!./badge.sample.jsx'
 import BadgeSample from 'babel-loader!./badge.sample.jsx'
-import 'style-loader!css-loader!./badge.sample.css'
 
 import Sample from '../../../components/sample'
 

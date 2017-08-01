@@ -4,12 +4,12 @@ import Badge from '../../../../../src/badge'
 
 const Basic = () => {
   return (
-    <div className="ccd-badge-sample">
+    <div>
       <Badge>default</Badge>
       <Badge>badges</Badge>
       <Badge>are</Badge>
       <Badge>quite</Badge>
-      <Badge>simple</Badge>
+      <Badge>simple</Badge> and correctly aligned to the text baseline.
     </div>
   )
 }

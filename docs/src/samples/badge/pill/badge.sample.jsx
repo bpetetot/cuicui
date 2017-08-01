@@ -4,7 +4,7 @@ import Badge from '../../../../../src/badge'
 
 const Basic = () => {
   return (
-    <div className="ccd-badge-sample">
+    <div>
       <Badge pill>Just</Badge>
       <Badge pill>add</Badge>
       <Badge pill>pill</Badge>
