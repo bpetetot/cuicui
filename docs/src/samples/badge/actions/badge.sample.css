@@ -1,0 +1,18 @@
+.ccd-badge-sample {
+  display: flex;
+  align-items: center;
+}
+
+.ccd-badge-sample > .cc-badge {
+  margin: .5em;
+}
+
+.ccd-badge-action {
+  border: 2px solid #636c72;
+  cursor: pointer;
+}
+
+.ccd-badge-clicked {
+  background-color: #fff;
+  color: #636c72;
+}

@@ -1,0 +1,28 @@
+.ccd-badge-sample {
+  display: flex;
+  align-items: center;
+}
+
+.ccd-badge-sample > .cc-badge {
+  margin: .5em;
+}
+
+.ccd-superman {
+  background-color: #1D3F86;
+  color: #D92235;
+}
+
+.ccd-batman {
+  background-color: #000;
+  color: #FFD70D;
+}
+
+.ccd-flash {
+  background-color: #960900;
+  color: #E8AC00;
+}
+
+.ccd-greenlantern {
+  background-color: #055902;
+  color: #02D525;
+}
