@@ -1,0 +1,8 @@
+.ccd-badge-sample {
+  display: flex;
+  align-items: center;
+}
+
+.ccd-badge-sample > .cc-badge {
+  margin: .5em;
+}
