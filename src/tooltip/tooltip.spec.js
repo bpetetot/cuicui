@@ -4,7 +4,7 @@ import React from 'react'
 import { mount } from 'enzyme'
 import snap from 'snap'
 
-import Tooltip from './tooltip.jsx'
+import Tooltip from './tooltip'
 
 jest.mock(
   'popper.js',
