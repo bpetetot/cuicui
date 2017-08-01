@@ -1,4 +1,4 @@
-.cc-badge{font-size:.8em;font-weight:700;line-height:1;text-align:center;white-space:nowrap;vertical-align:initial;border:none;border-radius:.2em;padding:.25em .5em}.cc-badge-default{background-color:#6a737d;color:#fff}.cc-badge-pill{padding-right:.6em;padding-left:.6em;border-radius:10rem}
+.cc-badge{display:inline-block;padding:.3em .4em;font-size:.9em;font-weight:600;height:1em;line-height:1;border-radius:.2em;vertical-align:initial}.cc-badge-default{background-color:#6a737d;color:#fff}.cc-badge-pill{padding-right:.6em;padding-left:.6em;border-radius:10rem}
 .cc-blockquote{margin:0 0 1.5em;padding:0 1em;color:#6a737d;border-left:.25em solid #ccc}
 .cc-panel{border:.02em solid #ccc;border-radius:.2em}.cc-panel--title{font-size:1.1em;padding-left:1em;border-bottom:.02em solid #ccc;height:2em;line-height:2em;color:#6a737d}
 p.cc-panel--content{margin:0;padding:1em}
