@@ -1,3 +1,10 @@
 :root {
-  --mainColor: red;
+  --primary-dark: #24292e;
+  --primary-light: #fff;
+
+  --secondary-dark: #6a737d;
+  --secondary-light: #fff;
+
+  --default-dark: #333;
+  --default-light: #ccc;
 }

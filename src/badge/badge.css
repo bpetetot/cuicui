@@ -1,3 +1,5 @@
+@import "../common/styles/index.css";
+
 .cc-badge {
   font-size: .8em;
   font-weight: 700;
@@ -6,13 +8,13 @@
   white-space: nowrap;
   vertical-align: baseline;
   border: none;
-  border-radius: .25em;
+  border-radius: var(--border-radius);
   padding: .25em .5em
 }
 
 .cc-badge-default {
-  background-color: #586069;
-  color: #fff;
+  background-color: var(--secondary-dark);
+  color: var(--secondary-light);
 }
 
 .cc-badge-pill {

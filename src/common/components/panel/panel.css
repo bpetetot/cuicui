@@ -1,13 +1,15 @@
+@import "../../styles/index.css";
+
 .cc-panel {
-  border: .02em solid #ddd;
-  border-radius: .2em;
+  border: var(--border);
+  border-radius: var(--border-radius);
 }
 
 .cc-panel--title {
   font-size: 1.1em;
   padding-left: 1em;
-  border-bottom: .02em solid #ddd;
+  border-bottom: var(--border);
   height: 2em;
   line-height: 2em;
-  color: #AAA;
+  color: var(--secondary-dark);
 }
