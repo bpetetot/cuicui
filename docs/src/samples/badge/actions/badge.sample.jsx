@@ -11,12 +11,12 @@ class Action extends Component {
 
   render() {
     return (
-      <div className="ccd-badge-sample">
+      <div>
         <Badge
           className={classnames('ccd-badge-action', { 'ccd-badge-clicked': this.state.clicked })}
           onClick={this.handleClick}
         >
-          You can click it
+          {!this.state.clicked ? 'You can click it' : '🚀 whaouuu ! 🚀'}
         </Badge>
       </div>
     )

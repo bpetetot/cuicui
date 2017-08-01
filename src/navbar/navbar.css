@@ -1,8 +1,10 @@
+@import "../common/styles/index.css";
+
 .cc-navbar {
   height: 4em;
   line-height: 4em;
-  color: #fff;
-  background-color: #24292e;
+  color: var(--primary-light);
+  background-color: var(--primary-dark);
   display: flex;
   justify-content: center;
 }
@@ -25,13 +27,13 @@
 .cc-navbar--menu a {
   padding: 0 2em;
   text-decoration: none;
-  color: rgba(255,255,255,0.75);
+  color: var(--default-light);
 }
 
 .cc-navbar--menu  a:visited {
-  color: rgba(255,255,255,0.75);
+  color: var(--default-light);
 }
 
 .cc-navbar--menu  a:hover {
-  color: #fff;
+  color: var(--primary-light);
 }

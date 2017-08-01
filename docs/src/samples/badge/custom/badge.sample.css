@@ -1,12 +1,3 @@
-.ccd-badge-sample {
-  display: flex;
-  align-items: center;
-}
-
-.ccd-badge-sample > .cc-badge {
-  margin: .5em;
-}
-
 .ccd-superman {
   background-color: #1D3F86;
   color: #D92235;

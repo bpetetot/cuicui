@@ -1,7 +1,9 @@
+@import "../common/styles/index.css";
+
 .cc-tabs {
   position: relative;
-  border: .02em solid #ddd;
-  border-radius: .2em;
+  border: var(--border);
+  border-radius: var(--border-radius);
 }
 
 .cc-tabs-content {

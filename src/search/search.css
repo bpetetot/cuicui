@@ -1,3 +1,5 @@
+@import "../common/styles/index.css";
+
 .cc-search {
   position: relative;
 }
@@ -8,7 +10,7 @@
   height: 1em;
   width: 1em;
   padding: .5em;
-  fill: #cecece;
+  fill: var(--default-light);
 }
 
 .cc-search .cc-search-icon {

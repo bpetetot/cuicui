@@ -1,3 +1,5 @@
+@import "../common/styles/index.css";
+
 ul.cc-panel-list--content {
   padding: 0;
   margin: 0;
@@ -9,7 +11,7 @@ ul.cc-panel-list--content > li {
   margin: 0;
   list-style-type: none;
   line-height: 2em;
-  border-bottom: .02em solid #ddd;
+  border-bottom: var(--border);
 }
 
 ul.cc-panel-list--content > li:last-child {

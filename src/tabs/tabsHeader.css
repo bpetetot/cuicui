@@ -1,34 +1,36 @@
+@import "../common/styles/index.css";
+
 ul.cc-tabs-header {
   display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
-  border-bottom: .02em solid #ddd;
+  border-bottom: var(--border);
 }
 
 ul.cc-tabs-header > li > button {
   cursor: pointer;
   font-weight: 600;
   font-size: 1em;
-  color: #586069;
+  color: var(--secondary-dark);
   margin: 0;
-  padding: .9em 1.1em;
+  padding: .5em 1em;
   border: none;
   background-color: transparent;
   outline: none;
 }
 
 ul.cc-tabs-header > li > button:hover {
-  color: #000;
+  color: var(--primary-dark);
 }
 
 ul.cc-tabs-header > li.cc-tabs--selected {
-  background-color: #ddd;
+  background-color: var(--default-light);
 }
 
 ul.cc-tabs-header > li.cc-tabs--selected > button {
   cursor: default;
-  color: #000;
+  color: var(--primary-dark);
 }
 
 

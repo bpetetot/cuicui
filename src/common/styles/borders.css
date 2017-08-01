@@ -1,0 +1,4 @@
+:root {
+  --border: .02em solid var(--default-light);
+  --border-radius: .2em;
+}

@@ -11,7 +11,7 @@ const SamplePage = () => {
   return (
     <div>
       <h2>Custom badge</h2>
-      <p>Badge can be customized by `className` and `style` properties</p>
+      <p>Badge can be customized by <code>className</code> and <code>style</code> properties</p>
       <Sample
         code={source}
         css={css}

@@ -1,3 +1,5 @@
+@import "../../styles/index.css";
+
 input.cc-input {
   display: block;
   width: 100%;
@@ -5,13 +7,12 @@ input.cc-input {
   padding: .5em;
   font-size: 1em;
   line-height: 1em;
-  background-color: #fff;
   background-image: none;
-  border: .02em solid #ccc;
-  border-radius: .2em;
+  border: var(--border);
+  border-radius: var(--border-radius);
   outline: none;
 }
 
 input.cc-input::placeholder {
-  color: #cecece;
+  color: var(--default-light);
 }
