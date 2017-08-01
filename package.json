@@ -1,6 +1,6 @@
 {
   "name": "cuicui",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "My React UI components",
   "main": "lib/cuicui.js",
   "repository": "https://github.com/bpetetot/cuicui.git",
