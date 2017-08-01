@@ -1,4 +1,4 @@
 import withTooltip from './withTooltip'
-import Tooltip from './Tooltip'
+import Tooltip from './tooltip'
 
 export { withTooltip, Tooltip }

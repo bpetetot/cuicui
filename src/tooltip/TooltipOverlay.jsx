@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import './TooltipOverlay.css'
+import './tooltipOverlay.css'
 
 class TooltipOverlay extends Component {
   render() {

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Popper from 'popper.js'
 
-import TooltipOverlay from './TooltipOverlay'
+import TooltipOverlay from './tooltipOverlay'
 
 class Tooltip extends Component {
   state = {
